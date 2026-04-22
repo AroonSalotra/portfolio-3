@@ -1,7 +1,9 @@
+import Project from "./Project";
+
 const Projects = () => {
 
     const data = [
-        { name: "Clicker Game" },
+        { name: "Click'A Thon" },
         { name: "Deal-IO" },
         { name: "Drag n Drop" }
     ]
@@ -11,7 +13,7 @@ const Projects = () => {
             <h2>Projects</h2>
             <div className="projects">
                 {data.map(({ name }) => (
-                    <div key={name}>{name}</div>
+                    <Project key={name} name={name} />
                 ))}
             </div>
         </div>

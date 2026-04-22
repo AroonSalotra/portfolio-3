@@ -1,6 +1,9 @@
-const Skill = ({ name }) => {
+const Skill = ({ name, icon }) => {
     return (
-        <div>{name}</div>
+        <div className="skill">
+            {icon}
+            <div>{name}</div>
+        </div>
     )
 }
 

@@ -1,16 +1,22 @@
 import Skill from "./Skill";
+import { MdFindInPage } from "react-icons/md";
+import { IoMdColorPalette } from "react-icons/io";
+import { BsJavascript, BsTypescript } from "react-icons/bs";
+import { FaReact, FaFigma } from "react-icons/fa";
+import { SiNextdotjs } from "react-icons/si";
+import { FaGithub } from "react-icons/fa6";
 
 const Skillset = () => {
 
     const skillData = [
-        { name: "HTML" },
-        { name: "CSS" },
-        { name: "Javascript" },
-        { name: "Typescript" },
-        { name: "React" },
-        { name: "Next.js" },
-        { name: "Figma" },
-        { name: "Git" }
+        { name: "HTML", icon: <MdFindInPage className="icon" /> },
+        { name: "CSS", icon: <IoMdColorPalette className="icon" /> },
+        { name: "Javascript", icon: <BsJavascript className="icon" /> },
+        { name: "Typescript", icon: <BsTypescript className="icon" /> },
+        { name: "React", icon: <FaReact className="icon" /> },
+        { name: "Next.js", icon: <SiNextdotjs className="icon" /> },
+        { name: "Figma", icon: <FaFigma className="icon" /> },
+        { name: "Git", icon: <FaGithub className="icon" /> }
     ]
 
     return (
@@ -20,8 +26,8 @@ const Skillset = () => {
             </h2>
 
             <div className="skills">
-                {skillData.map(({ name }) => (
-                    <Skill key={name} name={name} />
+                {skillData.map(({ name, icon }) => (
+                    <Skill key={name} name={name} icon={icon} />
                 ))}
             </div>
 

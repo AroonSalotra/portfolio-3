@@ -1,8 +1,11 @@
-const Project = ({name, description, imgUrl}) => {
+import { FaLink } from "react-icons/fa6";
+
+const Project = ({ name, description, imgUrl }) => {
   return (
-    <h2>
-        {name}
-    </h2>
+    <div>
+      <h2>{name}</h2>
+      <div className="img-placeholder" />
+    </div>
   )
 }
 
