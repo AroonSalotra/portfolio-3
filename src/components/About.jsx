@@ -1,4 +1,6 @@
 import headshot from "../assets/headshot.jpg"
+import { FaLinkedin, FaPhone } from "react-icons/fa";
+import { AiFillMail } from "react-icons/ai";
 
 const About = () => {
     return (
@@ -12,10 +14,10 @@ const About = () => {
                 Self-taught UK based developer - I build applications focusing on responsiveness & functionality.
             </p> */}
 
-            <ul>
-                <li>LinkedIn:</li>
-                <li>Email:</li>
-                <li>Phone:</li>
+            <ul className="about-icons">
+                <li><FaLinkedin className="icon-s" /></li>
+                <li><FaPhone className="icon-s" /></li>
+                <li><AiFillMail className="icon-s" /></li>
             </ul>
 
 

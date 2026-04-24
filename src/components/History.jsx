@@ -31,14 +31,14 @@ const History = () => {
             {/* <h2>Timeline</h2> */}
 
             <div className="history-btns">
-                <button className="history-btn" onClick={() => handleClick(0)}>2020</button>
-                <button className="history-btn" onClick={() => handleClick(1)}>2021</button>
-                <button className="history-btn" onClick={() => handleClick(2)}>2023</button>
-                <button className="history-btn" onClick={() => handleClick(3)}>Today</button>
+                <button style={{ width: '7em' }} className="history-btn" onClick={() => handleClick(0)}>2020</button>
+                <button style={{ width: '14em' }} className="history-btn" onClick={() => handleClick(1)}>2021</button>
+                <button style={{ width: '14em' }} className="history-btn" onClick={() => handleClick(2)}>2023</button>
+                <button style={{ width: '7em' }} className="history-btn" onClick={() => handleClick(3)}>Today</button>
             </div>
 
             <div className="history-content">
-                <p className="history-text transition-size" style={{display: `${showText}`}}>
+                <p className="history-text transition-size" style={{ display: `${showText}` }}>
                     {selectText}
                 </p>
 

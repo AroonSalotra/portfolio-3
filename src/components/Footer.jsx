@@ -1,9 +1,11 @@
 const Footer = () => {
     return (
         <div className="container-footer">
-            <p>
-                Powered by Vite (React)
-            </p>
+            <ul>
+                <li>
+                    Powered by Vite (React) & Firebase 
+                </li>
+            </ul>
         </div>
     )
 }
