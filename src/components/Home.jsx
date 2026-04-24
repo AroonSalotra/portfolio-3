@@ -2,6 +2,8 @@ import About from './About';
 import Navbar from './Navbar';
 import Skillset from './Skillset';
 import Projects from './Projects';
+import Contact from './Contact';
+import History from './History';
 
 const Home = () => {
     return (
@@ -11,11 +13,18 @@ const Home = () => {
                 <Navbar />
             </div>
 
-            <About />
+            <div className='container-main'>
 
-            <Skillset />
+                <About />
 
-            <Projects />
+                <History />
+                
+                <Skillset />
+
+                <Projects />
+
+                <Contact />
+            </div>
         </>
     );
 };

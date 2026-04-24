@@ -7,7 +7,7 @@ const About = () => {
 
             <div className="container-btn">
                 <button className="btn">Projects</button>
-                <button className="btn">Contact</button>
+                <button className="btn">Resume</button>
             </div>
         </div>
     );
