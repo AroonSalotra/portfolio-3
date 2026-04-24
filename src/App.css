@@ -1,10 +1,13 @@
 :root {
   font-family: Georgia, 'Times New Roman', Times, serif;
+  --color-a: #292F2E;
+  --color-b: #2E3C3B;
   color: white;
 }
 
 body {
   margin: 0em 1em;
+  background-color: var(--color-a);
 }
 
 ul {
@@ -14,6 +17,10 @@ ul {
 button {
   border: none;
   font-size: 2em;
+}
+
+.transition-move {
+  transition: transform 0.5s ease;
 }
 
 .nav-header {
@@ -44,7 +51,7 @@ button {
 
 .container-main {
   padding: 0.5em;
-  background-color: #2E3C3B;
+  background-color: var(--color-b);
 }
 
 .container-btn {
@@ -131,6 +138,24 @@ body {
 
 .btn-img {}
 
+.history-btns {
+  display: flex;
+  gap: 0.1em;
+}
+
+.history-btn {
+  font-size: 1.5em;
+  padding: 0.25em;
+}
+
+.history-text {
+  max-width: 100%;
+  padding: 1em;
+  margin: 0em;
+  border-radius: 1em;
+  background-color: var(--color-a);
+}
+
 @media (min-width: 1400px) {
   .navbar {
     display: flex;
@@ -140,6 +165,10 @@ body {
 
   .container-btn {
     flex-direction: row;
+  }
+
+  .history-text {
+    max-width: 50%;
   }
 }
 
@@ -200,7 +229,7 @@ body {
 
   .container-main {
     transform: translateY(-0.5em);
-    background-color: #2E3C3B;
+    background-color: var(--color-b);
     border-radius: 1%;
     padding: 1em;
   }

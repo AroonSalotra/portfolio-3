@@ -1,4 +1,10 @@
+import { useState } from "react"
+import { TbTriangleInvertedFilled } from "react-icons/tb";
+
 const History = () => {
+
+    const [selectText, setSelectText] = useState(null);
+    const [arrowPos, setArrowPos] = useState(null);
 
     const text = [
         "Graduated from University of Northampton, Honors in Games Design",
@@ -7,16 +13,26 @@ const History = () => {
         "Currently, I am at Objectway as a Full Stack Developer currently working on modernising legacy applications"
     ]
 
+    const handleClick = (textIndex, setPos) => {
+        setSelectText(t => text[textIndex]);
+        setArrowPos(a => setPos)
+    }
+
     return (
         <div>
-            <h2>History</h2>
+            <h2>Timeline</h2>
 
             <div className="history-btns">
-                <button>2020</button>
-                <button>2021</button>
-                <button>2023</button>
-                <button>Now</button>
+                <button className="history-btn" onClick={() => handleClick(0, '1.5em')}>2020</button>
+                <button className="history-btn" onClick={() => handleClick(1, '5.5em')}>2021</button>
+                <button className="history-btn" onClick={() => handleClick(2, '9.5em')}>2023</button>
+                <button className="history-btn" onClick={() => handleClick(3, '14.5em')}>Today</button>
             </div>
+
+            <TbTriangleInvertedFilled className="transition-move"  style={{ transform: `translateX(${arrowPos})` }} />
+            <p className="history-text">
+                {selectText}
+            </p>
         </div>
     )
 }

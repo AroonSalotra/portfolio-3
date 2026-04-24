@@ -2,21 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-  background: #292F2E;
 }
 
 h1,
 h2 {
   font-weight: 400;
-}
-
-svg {}
-
-body {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
 }
 
 @media (min-width: 400px) {
