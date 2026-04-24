@@ -3,7 +3,7 @@ const Navbar = () => {
         <ul className="navbar">
             <li>Home</li>
             <li>Projects</li>
-            <li>Contact</li>
+            <li>Timeline</li>
         </ul>
     );
 }

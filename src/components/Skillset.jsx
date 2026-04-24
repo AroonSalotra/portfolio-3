@@ -21,7 +21,7 @@ const Skillset = () => {
 
     return (
         <div className="container-skills">
-            <h2>
+            <h2 style={{margin: '2em 0em'}}>
                 Skillset
             </h2>
 

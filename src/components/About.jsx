@@ -1,14 +1,32 @@
+import headshot from "../assets/headshot.jpg"
+
 const About = () => {
     return (
         <div className="container-about">
-            <p className="text-about">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo atque incidunt nesciunt reiciendis corporis doloribus nostrum molestiae! Quidem commodi officiis explicabo nemo sequi. Dicta dolorem ex placeat? Aut, perspiciatis harum?
-            </p>
+            <h2>Aroon Salotra</h2>
+            <h3>Full Stack Developer</h3>
 
-            <div className="container-btn">
+            <img className="img-about" src={headshot} />
+
+            {/* <p className="text-about">
+                Self-taught UK based developer - I build applications focusing on responsiveness & functionality.
+            </p> */}
+
+            <ul>
+                <li>LinkedIn:</li>
+                <li>Email:</li>
+                <li>Phone:</li>
+            </ul>
+
+
+            {/* <div className="container-btn">
                 <button className="btn">Projects</button>
                 <button className="btn">Resume</button>
-            </div>
+            </div> */}
+
+            <button className="btn-about">
+                Resume
+            </button>
         </div>
     );
 };

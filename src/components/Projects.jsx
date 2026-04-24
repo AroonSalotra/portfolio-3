@@ -15,7 +15,7 @@ const Projects = () => {
 
             const projectList = snap.docs.map(doc => ({
                 id: doc.id,
-                ...doc.data()
+                ...doc.data()   
             }));
 
             setData(projectList);
@@ -28,7 +28,7 @@ const Projects = () => {
     return (
         <div className="container-projects">
             <h2>Projects</h2>
-            <div className="projects">
+            <div className="projects section">
                 {data.length > 0 && data.map(({ id, name, description, imageLink, stack }) => (
                     <Project key={id} name={name} imgUrl={imageLink} description={description} stack={stack} />
                 ))}

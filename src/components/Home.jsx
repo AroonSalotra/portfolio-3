@@ -4,6 +4,7 @@ import Skillset from './Skillset';
 import Projects from './Projects';
 import Contact from './Contact';
 import History from './History';
+import Footer from './Footer';
 
 const Home = () => {
     return (
@@ -13,18 +14,22 @@ const Home = () => {
                 <Navbar />
             </div>
 
-            <div className='container-main'>
 
-                <About />
+            <About />
 
-                <History />
-                
-                <Skillset />
+            <History />
 
-                <Projects />
 
-                <Contact />
-            </div>
+            {/* <div className='section'> */}
+            <Projects />
+            {/* </div> */}
+
+            <Skillset />
+
+
+            {/* <Contact /> */}
+
+            <Footer />
         </>
     );
 };

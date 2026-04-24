@@ -5,6 +5,8 @@ const History = () => {
 
     const [selectText, setSelectText] = useState(null);
     const [arrowPos, setArrowPos] = useState(null);
+    const [showText, setShowText] = useState('none');
+    const [showArrow, setShowArrow] = useState('none');
 
     const text = [
         "Graduated from University of Northampton, Honors in Games Design",
@@ -13,26 +15,36 @@ const History = () => {
         "Currently, I am at Objectway as a Full Stack Developer currently working on modernising legacy applications"
     ]
 
-    const handleClick = (textIndex, setPos) => {
+    const handleClick = (textIndex) => {
+        setShowText(s => 'block');
+        setShowArrow(s => 'block');
         setSelectText(t => text[textIndex]);
-        setArrowPos(a => setPos)
+    }
+
+    const hideText = () => {
+        setShowText(s => 'none');
+        setShowArrow(s => 'none');
     }
 
     return (
-        <div>
-            <h2>Timeline</h2>
+        <div className="container-history">
+            {/* <h2>Timeline</h2> */}
 
             <div className="history-btns">
-                <button className="history-btn" onClick={() => handleClick(0, '1.5em')}>2020</button>
-                <button className="history-btn" onClick={() => handleClick(1, '5.5em')}>2021</button>
-                <button className="history-btn" onClick={() => handleClick(2, '9.5em')}>2023</button>
-                <button className="history-btn" onClick={() => handleClick(3, '14.5em')}>Today</button>
+                <button className="history-btn" onClick={() => handleClick(0)}>2020</button>
+                <button className="history-btn" onClick={() => handleClick(1)}>2021</button>
+                <button className="history-btn" onClick={() => handleClick(2)}>2023</button>
+                <button className="history-btn" onClick={() => handleClick(3)}>Today</button>
             </div>
 
-            <TbTriangleInvertedFilled className="transition-move"  style={{ transform: `translateX(${arrowPos})` }} />
-            <p className="history-text">
-                {selectText}
-            </p>
+            <div className="history-content">
+                <p className="history-text transition-size" style={{display: `${showText}`}}>
+                    {selectText}
+                </p>
+
+                <TbTriangleInvertedFilled onClick={hideText} className="history-btn-close" style={{ display: `${showText}` }} />
+            </div>
+
         </div>
     )
 }

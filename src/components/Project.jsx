@@ -8,9 +8,9 @@ const Project = ({ name, description, imgUrl, stack }) => {
         <img className="img-project" src={imgUrl} />
       </div>
       <div className="project-text">
-        <h2>{name}</h2>
-        <p className="img-desc">{description}</p>
-        <p>Made with {stack}</p>
+        <h2 className="project-title">{name}</h2>
+        <p className="project-desc">{description}</p>
+        <p className="project-stack">Made with {stack}</p>
       </div>
     </div>
   )
