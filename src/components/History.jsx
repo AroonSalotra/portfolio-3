@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { TbTriangleInvertedFilled } from "react-icons/tb";
 
-const History = () => {
+const History = ({ ref }) => {
 
     const [selectText, setSelectText] = useState(null);
     const [arrowPos, setArrowPos] = useState(null);
@@ -27,7 +27,7 @@ const History = () => {
     }
 
     return (
-        <div className="container-history">
+        <div className="container-history" ref={ref}>
             {/* <h2>Timeline</h2> */}
 
             <div className="history-btns">

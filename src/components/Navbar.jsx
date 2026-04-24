@@ -1,10 +1,18 @@
-const Navbar = () => {
+const Navbar = ({ homeRef, projectRef, timelineRef }) => {
+
+    const handleClick = (target) => {
+        target.current.scrollIntoView({ behavior: "smooth" });
+        console.log("clicked")
+    }
+
     return (
-        <ul className="navbar">
-            <li>Home</li>
-            <li>Projects</li>
-            <li>Timeline</li>
-        </ul>
+        <>
+            <ul className="navbar">
+                <li onClick={() => handleClick(homeRef)}>Home</li>
+                <li onClick={() => handleClick(projectRef)}>Projects</li>
+                <li onClick={() => handleClick(timelineRef)}>Timeline</li>
+            </ul>
+        </>
     );
 }
 
