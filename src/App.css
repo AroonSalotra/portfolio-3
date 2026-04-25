@@ -11,12 +11,16 @@ body {
   background-color: var(--color-a);
 }
 
+h2 {
+  border-top: 5px solid var(--color-b);
+}
+
 .icon-s {
   font-size: 1.5em;
 }
 
 .icon-l {
-  font-size: 4em;
+  font-size: 2.5em;
 }
 
 ul {
@@ -61,12 +65,14 @@ button {
   gap: 4em;
 }
 
-.container-about {
+.content-about {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  /* width: 80%; */
+  /* width: 30em; */
+  max-width: 20em;
   margin: 0 auto;
   background-color: var(--color-a);
   padding: 2em;
@@ -75,7 +81,7 @@ button {
   box-shadow: 0px -8px 20px 5px var(--color-c);
 }
 
-.container-about,
+.content-about,
 h2,
 h3 {
   margin: 0 auto;
@@ -105,7 +111,8 @@ h3 {
 }
 
 .img-about {
-  width: 5em;
+  /* width: 70%; */
+  width: 9em;
   height: 200px;
   zoom: 150%;
   object-fit: cover;
@@ -130,6 +137,8 @@ h3 {
   width: 100%;
   display: flex;
   justify-content: space-around;
+  padding-left: 0px;
+  margin: 3em 0;
 }
 
 .icon {
@@ -280,6 +289,10 @@ body {
   padding-top: 8em;
 }
 
+.container-about {
+  padding-top: 8em;
+}
+
 
 @media (min-width: 1400px) {
   #root {
@@ -291,7 +304,7 @@ body {
     flex-direction: row;
   }
 
-  .container-about {
+  .content-about {
     margin-top: 2em;
     width: 20em;
   }
@@ -308,7 +321,8 @@ body {
     opacity: 100%;
   }
 
-  .history-btn:hover {
+  .history-btn:hover,
+  .btn-about:hover {
     background-color: var(--color-b);
   }
 
@@ -395,11 +409,15 @@ body {
   .container-history {
     padding-top: 0em;
   }
+
+  .container-about {
+    padding-top: 0em;
+  }
 }
 
 @media (min-width: 770px) {
   :root {
-    font-size: 2em;
+    /* font-size: 2em; */
   }
 
   body {

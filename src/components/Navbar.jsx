@@ -11,7 +11,7 @@ const Navbar = ({ homeRef, projectRef, timelineRef }) => {
     }
 
     const toggleNavbar = () => {
-        setIsActive(active => !isActive)
+        setIsActive(active => !isActive);
     }
 
     return (
