@@ -1,8 +1,9 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { TbTriangleInvertedFilled } from "react-icons/tb";
 
 const History = ({ ref }) => {
 
+    const [selectIndex, setSelectIndex] = useState(null);
     const [selectText, setSelectText] = useState(null);
     const [arrowPos, setArrowPos] = useState(null);
     const [showText, setShowText] = useState('none');
@@ -15,10 +16,15 @@ const History = ({ ref }) => {
         "Currently, I am at Objectway as a Full Stack Developer currently working on modernising legacy applications"
     ]
 
+    useEffect(() => {
+        handleClick(3);
+    }, [])
+
     const handleClick = (textIndex) => {
         setShowText(s => 'block');
         setShowArrow(s => 'block');
         setSelectText(t => text[textIndex]);
+        setSelectIndex(u => textIndex);
     }
 
     const hideText = () => {
@@ -26,23 +32,51 @@ const History = ({ ref }) => {
         setShowArrow(s => 'none');
     }
 
+    const buttons = [
+        {
+            index: 0,
+            width: "7em",
+            label: "2020"
+        },
+        {
+            index: 1,
+            width: "14em",
+            label: "2021"
+        },
+        {
+            index: 2,
+            width: "14em",
+            label: "2023"
+        },
+        {
+            index: 3,
+            width: "7em",
+            label: "Today"
+        }
+    ]
+
     return (
         <div className="container-history" ref={ref}>
             <h2 className="section-title">Timeline</h2>
 
             <div className="history-btns">
-                <button style={{ width: '7em' }} className="history-btn" onClick={() => handleClick(0)}>2020</button>
-                <button style={{ width: '14em' }} className="history-btn" onClick={() => handleClick(1)}>2021</button>
-                <button style={{ width: '14em' }} className="history-btn" onClick={() => handleClick(2)}>2023</button>
-                <button style={{ width: '7em' }} className="history-btn" onClick={() => handleClick(3)}>Today</button>
+
+                {buttons.map(({ index, width, label }) => {
+                    return <button style={{ width: `${width}` }}
+                        className={`history-btn ${selectIndex === index ? "selected" : ""}`}
+                        onClick={() => handleClick(index)}
+                        key={`timeline-btn ${label}`}
+                    >
+                        {label}
+                    </button>
+                })}
+
             </div>
 
             <div className="history-content">
                 <p className="history-text transition-size" style={{ display: `${showText}` }}>
                     {selectText}
                 </p>
-
-                <TbTriangleInvertedFilled onClick={hideText} className="history-btn-close" style={{ display: `${showText}` }} />
             </div>
 
         </div>
