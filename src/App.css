@@ -98,9 +98,13 @@ h3 {
   border-top: 5px solid var(--color-b);
 }
 
-.container-footer > ul {
+.container-footer>ul {
   display: flex;
-  justify-content: space-between;
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
 }
 
 .container-history {
@@ -146,7 +150,7 @@ h3 {
   align-items: center;
 }
 
-.skill > p {
+.skill>p {
   font-weight: 500;
 }
 
@@ -466,6 +470,11 @@ body {
 @media (min-width: 770px) {
   :root {
     /* font-size: 2em; */
+  }
+
+  .container-footer>ul {
+    justify-content: space-between;
+    flex-direction: row;
   }
 
   body {
