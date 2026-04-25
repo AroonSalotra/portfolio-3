@@ -293,11 +293,30 @@ body {
   padding-top: 8em;
 }
 
+.msg {
+  transition: transform 120ms ease,
+    opacity 120ms ease;
+  position: absolute;
+  transform: translateY(11.5em);
+}
+
+.hide {
+  opacity: 0;
+}
+
+.show {
+  opacity: 100;
+}
 
 @media (min-width: 1400px) {
   #root {
     max-width: 3000px;
     margin: 0 auto;
+  }
+
+  .clickable:hover {
+    cursor: pointer;
+    color: var(--color-b);
   }
 
   .container-btn {
