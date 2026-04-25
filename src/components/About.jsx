@@ -8,23 +8,36 @@ const About = ({ ref }) => {
     const [showMsg, setShowMsg] = useState(null);
 
     const handleClick = (target) => {
+        const data = {
+            phone: "07397377081",
+            email: "aroonsalotra@gmail.com"
+        };
 
-        let copyText = null;
-        if (target == "phone") {
-            copyText = "07397377081"
+        const text = data[target];
+
+        if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(text);
+        } else {
+            // fallback for older mobile browsers
+            const textarea = document.createElement("textarea");
+            textarea.value = text;
+            textarea.style.position = "fixed"; // avoid scrolling
+            document.body.appendChild(textarea);
+            textarea.focus();
+            textarea.select();
+
+            try {
+                document.execCommand("copy");
+            } catch (err) {
+                console.error("Copy failed", err);
+            }
+
+            document.body.removeChild(textarea);
         }
-
-        if (target == "email") {
-            copyText = "aroonsalotra@gmail.com"
-        }
-
-        navigator.clipboard.writeText(copyText);
 
         setShowMsg(true);
-        setTimeout(() => {
-            setShowMsg(false);
-        }, 1200);
-    }
+        setTimeout(() => setShowMsg(false), 1200);
+    };
 
     return (
         <div ref={ref} className="container-about">

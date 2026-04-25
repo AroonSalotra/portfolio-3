@@ -2,7 +2,7 @@ const Skill = ({ name, icon }) => {
     return (
         <div className="skill">
             {icon}
-            <div>{name}</div>
+            <p>{name}</p>
         </div>
     )
 }
