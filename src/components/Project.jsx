@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { FaLink } from "react-icons/fa6";
 
-const Project = ({ name, description, imgUrl, stack }) => {
+const Project = ({ name, description, imgUrl, stack, redirect }) => {
   return (
-    <div className="project-card">
+    <a className="project-card" target="_blank" href={redirect}>
       <div>
         <img className="img-project" src={imgUrl} />
       </div>
@@ -12,7 +12,7 @@ const Project = ({ name, description, imgUrl, stack }) => {
         <p className="project-desc">{description}</p>
         <p className="project-stack">{stack}</p>
       </div>
-    </div>
+    </a>
   )
 }
 

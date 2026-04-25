@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
+import signature from "../assets/signature.png"
 
 const Navbar = ({ homeRef, projectRef, timelineRef }) => {
     const [isActive, setIsActive] = useState(false);
@@ -18,7 +19,8 @@ const Navbar = ({ homeRef, projectRef, timelineRef }) => {
         <>
             <header className="navbar">
                 <div className="nav-top">
-                    <h1 className="nav-title">aroonsalotra.com</h1>
+                    {/* <h1 className="nav-title">aroonsalotra.com</h1> */}
+                    <img className="nav-title" src={signature}></img>
 
                     <GiHamburgerMenu className="nav-btn icon-l" onClick={() => setIsActive(!isActive)} />
                 </div>
