@@ -18,7 +18,7 @@ const Navbar = ({ homeRef, projectRef, timelineRef }) => {
         <>
             <header className="navbar">
                 <div className="nav-top">
-                    <h1>aroonsalotra.com</h1>
+                    <h1 className="nav-title">aroonsalotra.com</h1>
 
                     <GiHamburgerMenu className="nav-btn icon-l" onClick={() => setIsActive(!isActive)} />
                 </div>
@@ -29,6 +29,8 @@ const Navbar = ({ homeRef, projectRef, timelineRef }) => {
                     <li onClick={() => handleClick(projectRef)}>Projects</li>
                 </ul>
             </header>
+
+            <div className={`overlay ${isActive ? "blur" : ""}`} />
         </>
     );
 }

@@ -20,10 +20,10 @@ function App() {
       <Navbar homeRef={homeRef} projectRef={projectRef} timelineRef={timelineRef} />
 
       <About ref={homeRef} />
+      
+      <Projects ref={projectRef} />
 
       <History ref={timelineRef} />
-
-      <Projects ref={projectRef} />
 
       <Skillset />
 

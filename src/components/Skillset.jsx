@@ -21,9 +21,7 @@ const Skillset = () => {
 
     return (
         <div className="container-skills">
-            <h2 style={{margin: '2em 0em'}}>
-                Skillset
-            </h2>
+            <h2 className="section-title">Skillset</h2>
 
             <div className="skills">
                 {skillData.map(({ name, icon }) => (

@@ -28,7 +28,7 @@ const History = ({ ref }) => {
 
     return (
         <div className="container-history" ref={ref}>
-            <h2>Timeline</h2>
+            <h2 className="section-title">Timeline</h2>
 
             <div className="history-btns">
                 <button style={{ width: '7em' }} className="history-btn" onClick={() => handleClick(0)}>2020</button>

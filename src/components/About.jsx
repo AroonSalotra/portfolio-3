@@ -43,9 +43,10 @@ const About = ({ ref }) => {
         <div ref={ref} className="container-about">
             <div className="content-about">
                 <h2 style={{ border: "none" }}>Aroon Salotra</h2>
-                <h3>Full Stack Developer</h3>
 
                 <img className="img-about" src={headshot} />
+
+                <h3>Full Stack Developer</h3>
 
                 <ul className="about-icons">
                     <li>

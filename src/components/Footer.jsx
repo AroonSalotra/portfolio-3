@@ -16,7 +16,7 @@ const Footer = () => {
                 </li>
 
                 <li>
-                    © 2026 Aroon Salotra. All rights reserved.
+                    © 2026 Aroon Salotra. All rights reserved
                 </li>
             </ul>
         </div>
