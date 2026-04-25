@@ -1,11 +1,11 @@
 import './App.css'
-import About from './Components/About';
-import Navbar from './Components/Navbar';
-import Skillset from './Components/Skillset';
-import Projects from './Components/Projects';
-import Contact from './Components/Contact';
-import History from './Components/History';
-import Footer from './Components/Footer';
+import About from './components/About';
+import Navbar from './components/Navbar';
+import Skillset from './components/Skillset';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import History from './components/History';
+import Footer from './components/Footer';
 import { useRef } from 'react';
 
 
@@ -17,13 +17,9 @@ function App() {
 
   return (
     <>
-      <div className='nav-header' ref={homeRef}>
-        <h1 className='nav-title'>AroonSalotra.com</h1>
-        <Navbar homeRef={homeRef} projectRef={projectRef} timelineRef={timelineRef} />
-      </div>
+      <Navbar homeRef={homeRef} projectRef={projectRef} timelineRef={timelineRef} />
 
-
-      <About />
+      <About ref={homeRef} />
 
       <History ref={timelineRef} />
 
@@ -36,4 +32,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

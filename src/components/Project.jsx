@@ -10,7 +10,7 @@ const Project = ({ name, description, imgUrl, stack }) => {
       <div className="project-text">
         <h2 className="project-title">{name}</h2>
         <p className="project-desc">{description}</p>
-        <p className="project-stack">Made with {stack}</p>
+        <p className="project-stack">{stack}</p>
       </div>
     </div>
   )

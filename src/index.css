@@ -10,15 +10,11 @@ h3 {
   font-weight: 400;
 }
 
-@media (min-width: 400px) {
-  :root {}
+li {
+  list-style-type: none;
+}
 
-  body {
-    /* transform: translateY(2em);
-    padding: 0 2em;
-    background-color: #2E3C3B;
-    border-radius: 1%; */
-  }
+@media (min-width: 400px) {
 
   button:hover {
     cursor: pointer;
