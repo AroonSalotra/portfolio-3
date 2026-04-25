@@ -115,11 +115,15 @@ h3 {
 
 .container-footer>ul {
   display: flex;
-  /* flex-direction: column; */
-  /* justify-content: space-between; */
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  /* justify-content: center; */
   gap: 2em;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+}
+
+.container-footer ul li:nth-child(1) {
+  display: none;
 }
 
 .container-history {
@@ -570,6 +574,10 @@ body {
   .container-about {
     padding-top: 0em;
   }
+
+  .container-footer ul li:nth-child(1) {
+    display: block;
+  }
 }
 
 @media (min-width: 770px) {
@@ -579,7 +587,7 @@ body {
 
   .container-footer>ul {
     justify-content: space-between;
-    flex-direction: row;
+    /* flex-direction: row; */
   }
 
   body {
