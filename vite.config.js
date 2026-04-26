@@ -11,5 +11,5 @@ export default defineConfig({
       clientPort: 5173
     }
   },
-  base: "/portfolio-3/"
+  base: "/"
 })
