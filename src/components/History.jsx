@@ -5,9 +5,15 @@ const History = ({ ref }) => {
 
     const [selectIndex, setSelectIndex] = useState(null);
     const [selectText, setSelectText] = useState(null);
-    const [arrowPos, setArrowPos] = useState(null);
     const [showText, setShowText] = useState('none');
     const [showArrow, setShowArrow] = useState('none');
+
+    const buttons = [
+        { index: 0, width: "7em", label: "2020" },
+        { index: 1, width: "14em", label: "2021" },
+        { index: 2, width: "14em", label: "2023" },
+        { index: 3, width: "7em", label: "Today" }
+    ]
 
     const text = [
         "Graduated from University of Northampton, Honors in Games Design",
@@ -32,29 +38,6 @@ const History = ({ ref }) => {
         setShowArrow(s => 'none');
     }
 
-    const buttons = [
-        {
-            index: 0,
-            width: "7em",
-            label: "2020"
-        },
-        {
-            index: 1,
-            width: "14em",
-            label: "2021"
-        },
-        {
-            index: 2,
-            width: "14em",
-            label: "2023"
-        },
-        {
-            index: 3,
-            width: "7em",
-            label: "Today"
-        }
-    ]
-
     return (
         <div className="container-history" ref={ref}>
             <h2 className="section-title">Timeline</h2>
@@ -74,7 +57,10 @@ const History = ({ ref }) => {
             </div>
 
             <div className="history-content">
-                <p className="history-text transition-size" style={{ display: `${showText}` }}>
+                <p
+                    className="history-text transition-size"
+                    style={{ display: `${showText}` }}
+                >
                     {selectText}
                 </p>
             </div>

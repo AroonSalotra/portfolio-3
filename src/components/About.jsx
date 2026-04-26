@@ -18,10 +18,9 @@ const About = ({ ref }) => {
         if (navigator.clipboard && window.isSecureContext) {
             navigator.clipboard.writeText(text);
         } else {
-            // fallback for older mobile browsers
             const textarea = document.createElement("textarea");
             textarea.value = text;
-            textarea.style.position = "fixed"; // avoid scrolling
+            textarea.style.position = "fixed";
             document.body.appendChild(textarea);
             textarea.focus();
             textarea.select();
@@ -40,9 +39,11 @@ const About = ({ ref }) => {
     };
 
     return (
-        <div ref={ref} className="container-about">
+        <div className="container-about">
             <div className="content-about">
-                <h2 style={{ border: "none" }}>Aroon Salotra</h2>
+                <h2 style={{ border: "none" }}>
+                    Aroon Salotra
+                </h2>
 
                 <img className="img-about height-in-anim" src={headshot} />
 
@@ -66,7 +67,11 @@ const About = ({ ref }) => {
                     Copied to clipboard
                 </p>
 
-                <a target="_blank" href="https://drive.google.com/file/d/1mhXvuFkDhHA70f8cuKfPf08738qbkrGA/view?usp=sharing" className="btn-about">
+                <a
+                    target="_blank"
+                    href="https://drive.google.com/file/d/1mhXvuFkDhHA70f8cuKfPf08738qbkrGA/view?usp=sharing"
+                    className="btn-about"
+                >
                     Resume
                 </a>
             </div>

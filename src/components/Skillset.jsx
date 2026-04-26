@@ -25,7 +25,11 @@ const Skillset = () => {
 
             <div className="skills">
                 {skillData.map(({ name, icon }) => (
-                    <Skill key={name} name={name} icon={icon} />
+                    <Skill
+                        key={name}
+                        name={name}
+                        icon={icon}
+                    />
                 ))}
             </div>
 

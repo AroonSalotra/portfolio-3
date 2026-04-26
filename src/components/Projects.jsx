@@ -29,7 +29,14 @@ const Projects = ({ ref }) => {
             <h2 className="section-title">Projects</h2>
             <div className="projects section">
                 {data.length > 0 && data.map(({ id, name, description, imageLink, stack, redirect }) => (
-                    <Project key={id} name={name} imgUrl={imageLink} description={description} stack={stack} redirect={redirect} />
+                    <Project
+                        key={id}
+                        name={name}
+                        imgUrl={imageLink}
+                        description={description}
+                        stack={stack}
+                        redirect={redirect}
+                    />
                 ))}
             </div>
         </div>

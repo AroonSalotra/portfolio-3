@@ -19,16 +19,23 @@ const Navbar = ({ homeRef, projectRef, timelineRef }) => {
         <>
             <header className="navbar" ref={homeRef}>
                 <div className="nav-top">
-                    {/* <h1 className="nav-title">aroonsalotra.com</h1> */}
                     <img className="nav-title" src={signature}></img>
 
                     <GiHamburgerMenu className="nav-btn icon-l" onClick={() => setIsActive(!isActive)} />
                 </div>
 
                 <ul className={`nav-li ${isActive ? "active" : ""}`}>
-                    <li onClick={() => handleClick(homeRef)}>Home</li>
-                    <li onClick={() => handleClick(timelineRef)}>Timeline</li>
-                    <li onClick={() => handleClick(projectRef)}>Projects</li>
+                    <li onClick={() => handleClick(homeRef)}>
+                        Home
+                    </li>
+
+                    <li onClick={() => handleClick(timelineRef)}>
+                        Timeline
+                    </li>
+
+                    <li onClick={() => handleClick(projectRef)}>
+                        Projects
+                    </li>
                 </ul>
             </header>
 

@@ -17,13 +17,21 @@ function App() {
 
   return (
     <>
-      <Navbar homeRef={homeRef} projectRef={projectRef} timelineRef={timelineRef} />
+      <Navbar
+        homeRef={homeRef}
+        projectRef={projectRef}
+        timelineRef={timelineRef}
+      />
 
       <About />
-      
-      <Projects ref={projectRef} />
 
-      <History ref={timelineRef} />
+      <Projects
+        ref={projectRef}
+      />
+
+      <History
+        ref={timelineRef}
+      />
 
       <Skillset />
 
