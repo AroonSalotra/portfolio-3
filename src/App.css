@@ -113,6 +113,7 @@ h3 {
 }
 
 .container-history {
+  padding-top: 4em;
   display: flex;
   flex-direction: column;
   height: fit-content;
@@ -329,6 +330,7 @@ body {
 }
 
 .container-projects {
+  padding-top: 4em;
   margin: 4em 0;
   margin-bottom: 0;
   display: flex;
@@ -548,7 +550,6 @@ body {
   }
 
   .container-history {
-    padding-top: 0em;
     height: 15em;
   }
 
