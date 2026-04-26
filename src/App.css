@@ -115,10 +115,11 @@ h3 {
 .container-history {
   display: flex;
   flex-direction: column;
-  height: 18em;
+  height: fit-content;
 }
 
 .history-text {
+  /* width: 100%; */
   word-break: normal;
 }
 
@@ -245,16 +246,19 @@ body {
 .history-btns {
   display: flex;
   justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 0.2em;
 }
 
 .history-btn {
   font-size: 1.3em;
-  padding: 0.25em;
-  width: 10em;
-  border: 2px solid var(--color-b);
+  padding: 1em;
   color: white;
+  width: 100%;
   background-color: var(--color-a);
+  transition: transform 80ms ease;
+  border-radius: 10px;
 }
 
 .history-btn-close {
@@ -267,6 +271,7 @@ body {
 
 .history-text {
   width: fit-content;
+  width: 90%;
   padding: 1em;
   border-radius: 1em;
   background-color: var(--color-a);
@@ -396,6 +401,32 @@ body {
     margin: 0 auto;
   }
 
+  .history-btn {
+    padding: 0.25em;
+    width: 10em;
+    border-radius: 0px;
+  }
+
+  .history-btn:first-child {
+    border-radius: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .history-btn:last-child {
+    border-radius: 20px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+
+  .history-btn:hover {
+    transform: translateY(-5px);
+  }
+
+  .history-btn:active {
+    transform: translateY(2.5px);
+  }
+
   .blur {
     height: 0px;
     width: 0px;
@@ -429,7 +460,9 @@ body {
   }
 
   .history-text {
-    max-width: 50%;
+    /* max-width: 50%; */
+    width: 40em;
+    height: 3em;
   }
 
   .history-btn-close {

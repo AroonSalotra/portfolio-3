@@ -16,9 +16,9 @@ const History = ({ ref }) => {
     ]
 
     const text = [
-        "Graduated from University of Northampton, Honors in Games Design",
-        "Taught myself how to code, starting with Web Development, using freeCodeCamp.com",
-        "Started my first programming job at CTT Group, where I started to branch out from front end only to full stack",
+        "Graduated from University of Northampton with honors in Games Design",
+        "Taught myself how to code starting with Web Development, using freeCodeCamp.com",
+        "Started my first development job at CTT Group, where I started to branch out from front end only to full stack",
         "Currently, I am at Objectway as a Full Stack Developer currently working on modernising legacy applications"
     ]
 
@@ -45,7 +45,7 @@ const History = ({ ref }) => {
             <div className="history-btns">
 
                 {buttons.map(({ index, width, label }) => {
-                    return <button style={{ width: `${width}` }}
+                    return <button
                         className={`history-btn ${selectIndex === index ? "selected" : ""}`}
                         onClick={() => handleClick(index)}
                         key={`timeline-btn ${label}`}
@@ -57,10 +57,7 @@ const History = ({ ref }) => {
             </div>
 
             <div className="history-content">
-                <p
-                    className="history-text transition-size"
-                    style={{ display: `${showText}` }}
-                >
+                <p className="history-text transition-size" style={{ display: `${showText}` }}>
                     {selectText}
                 </p>
             </div>
