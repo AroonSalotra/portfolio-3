@@ -24,6 +24,64 @@ li {
   list-style-type: none;
 }
 
+@keyframes fade-in {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes opacity-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes spin-in {
+  0% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes height-in {
+  0% {
+    max-height: 1em;
+  }
+
+  100% {
+    max-height: 30em;
+  }
+}
+
+.fade-in-anim {
+  animation: 1.5s fade-in;
+}
+
+.opacity-in-anim {
+  animation: 3s opacity-in;
+}
+
+.spin-in-anim {
+  animation: 1s spin-in;
+}
+
+.height-in-anim {
+  animation: 3s height-in ease-out;
+}
+
 @media (min-width: 400px) {
 
   button:hover {

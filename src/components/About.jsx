@@ -44,7 +44,7 @@ const About = ({ ref }) => {
             <div className="content-about">
                 <h2 style={{ border: "none" }}>Aroon Salotra</h2>
 
-                <img className="img-about" src={headshot} />
+                <img className="img-about height-in-anim" src={headshot} />
 
                 <h3>Full Stack Developer</h3>
 

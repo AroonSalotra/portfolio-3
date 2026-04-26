@@ -3,7 +3,7 @@ import { FaLink } from "react-icons/fa6";
 
 const Project = ({ name, description, imgUrl, stack, redirect }) => {
   return (
-    <a className="project-card" target="_blank" href={redirect}>
+    <a className="project-card fade-in-anim" target="_blank" href={redirect}>
       <div>
         <img className="img-project" src={imgUrl} />
       </div>
