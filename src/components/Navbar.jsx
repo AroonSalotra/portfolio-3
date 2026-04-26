@@ -17,7 +17,7 @@ const Navbar = ({ homeRef, projectRef, timelineRef }) => {
 
     return (
         <>
-            <header className="navbar">
+            <header className="navbar" ref={homeRef}>
                 <div className="nav-top">
                     {/* <h1 className="nav-title">aroonsalotra.com</h1> */}
                     <img className="nav-title" src={signature}></img>

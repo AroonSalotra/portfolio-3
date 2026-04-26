@@ -19,7 +19,7 @@ function App() {
     <>
       <Navbar homeRef={homeRef} projectRef={projectRef} timelineRef={timelineRef} />
 
-      <About ref={homeRef} />
+      <About />
       
       <Projects ref={projectRef} />
 
