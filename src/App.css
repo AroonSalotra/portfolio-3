@@ -364,13 +364,13 @@ body {
 }
 
 .msg {
-  display: none;
+  pointer-events: none;
   transition: transform 120ms ease,
     opacity 120ms ease;
   position: absolute;
   transform: translateY(9.2em);
   background-color: var(--color-b);
-  padding: 0.5em 1.5em;
+  padding: 0.25em 1.5em;
   border-radius: 100px;
 }
 
